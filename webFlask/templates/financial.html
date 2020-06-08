@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home Page of SGRNA Platformk</title>
+  </head>
+  <body>
+    {% extends "base.html" %}
+    {% block content %}
+    
+    <h1> SAP Month End Report </h1>
+    <p>Please select date range for the report</p>
+    <form action="http://localhost:5000/financial" method="post">
+      <label for="start">Start date:</label>
+      <input type="date" id="start" name="date-start"
+        value="2018-07-22"
+        min="2018-01-01" max="2018-12-31">
+      <label for="end">End date:</label>
+      <input type="date" id="end" name="date-end"
+        value="2018-07-22"
+        min="2018-01-01" max="2018-12-31">
+      <input type="submit" value="Create month end report" />
+    </form>
+
+
+    {% endblock %}
+  </body>
+</html>
